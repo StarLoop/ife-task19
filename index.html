@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<style>
+body {font-family: "Microsoft Yahei UI", sans-serif; margin: 0;}
+button {
+	background: #03A9F4;
+	border: none;
+	color: white;
+	outline: none;
+	padding: 6px 24px;
+}
+input, select {font-family: "Microsoft Yahei UI", sans-serif; outline: none; padding: 4px 12px;}
+section {border-bottom: 1px solid #03A9F4;}
+section:not(.console) {padding: 12px 24px 24px;}
+.console p {padding: 24px;}
+.console .area {
+	height: 200px;
+	background: black;
+	color: white;
+	padding: 24px;
+	width: 95%;
+	float: left;
+	border-right: 1px solid #03A9F4;
+	overflow-y: scroll;
+}
+canvas {width: 95%; height: 200px; margin-left: 2em;}
+canvas:not(:last-of-type) {border-right: 1px solid black;}
+</style>
+</head>
+
+<body>
+	<main>
+		<section>
+			<p>初始区域</p>
+			<button data-fn="left-out">输出</button>
+			<button data-fn="left-in">输入</button>
+			<input data-value="user-input">
+			<button data-fn="right-in">输入</button>
+			<button data-fn="right-out">输出</button>
+		</section>
+		
+		<section>
+			<p>配置项 </p>
+			<button data-fn="random">随机生成数据</button>
+			<select></select>
+			<input data-value="num">个随机数
+			<!--右：<select></select-->
+		</section>
+		
+		<section>
+			<p>算法</p>
+			<canvas></canvas>
+			<!--canvas></canvas-->
+		</section>
+		
+		<section class="console">
+			<p>
+				排序算法
+				<button data-fn="start">开始</button>
+				<!--button data-fn="pause">暂停</button>
+				<button data-fn="stop">终止</button--></p>
+			<div class="area"><div class="top"></div><div class="log"></div></div>
+			<!--div class="area"><div class="top"></div><div class="log"></div></div-->
+		</section>
+	</main>
+	<script src="algorithm.js"></script>
+	<script src="canvas.js"></script>	
+	<script src="main.js"></script>
+</body>
+</html>
